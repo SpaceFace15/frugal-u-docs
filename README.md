@@ -117,7 +117,7 @@ The Resources API powers one of the core features of the Frugal U mobile applica
 ### **Behind the Scenes** 
 Behind the scenes, this dynamic content is made possible through integration with [**Strapi**](https://strapi.io/), an open-source headless CMS that enables you to easily manage and serve structured content via *RESTful APIs.* In this case, the Financial and Budgeting articles are part of a shared collection type *(financial-resources)*, which is queried from Strapi based on its Category field. When users open either tab, the app sends a [GET](https://rapidapi.com/blog/api-glossary/get/) request to the Strapi backend, filtering for entries where the category matches the selected type. The response, returned in JSON format, includes structured fields like Title, Description, Link, and SitePicture, which are then rendered in the React Native UI. The use of the **populate=SitePicture** [query parameter](https://rapidapi.com/blog/api-glossary/parameters/query/) ensures that image URLs are included in the response, allowing thumbnail previews to be shown next to each article. This approach offers a clean and scalable solution for managing educational content within the app.
 
-![Image](APIPnV/StrAPIPic.png)
+![Image](APIPnV/StrapiPIC.png)
 
 *Strapi Administative Home Page*
 
