@@ -1,0 +1,42 @@
+- [🧾 Frugal U API Documentation](#fu)
+
+- [📘 Introduction](#introduction)
+  - [What is an API?](#what-is-an-api)
+  - [An API typically includes](#an-api-typically-includes)
+
+- [🧠 Overview of the API](#overview-of-the-api)
+  - [What is the Resources API?](#what-is-the-resources-api)
+  - [Behind the Scenes](#behind-the-scenes)
+  - [Learning Curve and Video Demo](#learning-curve-and-video-demo)
+
+- [🔐 Authentication & Authorization](#authentication-authorization)
+  - [What’s the Difference?](#whats-the-difference)
+  - [How This API Handles It](#how-this-api-handles-it)
+  - [What If It Did Require Authentication?](#what-if-it-did-require-authentication)
+
+- [🧭 Endpoints & Parameters](#endpoints-parameters)
+  - [GET All Financial Resources](#get-all-financial-resources)
+  - [GET Filtered Financial Resources](#get-filtered-financial-resources)
+  - [UPDATE an Existing Resource](#update-an-existing-resource)
+  - [DELETE an Existing Resource](#delete-an-existing-resource)
+  - [Sample JSON Output (Shortened)](#sample-json-output-shortened)
+  - [What is a Request?](#what-is-a-request)
+  - [What is a Response?](#what-is-a-response)
+  - [How Requests Tie to Endpoints and Parameters](#how-requests-tie-to-endpoints-and-parameters)
+  - [Understanding REST Actions Using Real World Analogies](#understanding-rest-actions-using-real-world-analogies)
+
+- [📬 Request & Response Examples](#request-response-examples)  
+  - [Using A Real World Analogy For APIs](#rwa)
+  - [Diving Deeper into Requests and Responses ](#dd)
+  - [First Example](#first-example)
+  - [Second Example](#second-example)
+  - [Third Example](#third-example)
+  - [Fourth Example](#fourth-example)
+  - [Fifth Example](#fifth-example)
+  - [Conclusion](#conclusion)
+
+- [🚫 Error Codes & Rate Limiting](#ercd)
+  - [Error Codes](#err)
+  - [Rate Limiting](#rl)
+
+- [📨 Conclusion](#change)
