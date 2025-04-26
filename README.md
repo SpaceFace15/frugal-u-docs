@@ -3,15 +3,15 @@
 ## Introduction
 Welcome to the official API documentation for **Frugal U**, a mobile-first budgeting app built to help college students take control of their finances.
 
-APIs can hard to understand and implement even for devs who have been working with APIs for over a decade. You've probably used APIs and not even realized it. Everytime you go onto a website like [Youtube](https://www.youtube.com/) or [Google](https://www.google.com/) you're using an API to load that web page. If you've ever gotten a 404 page error when you try to connect to a page, that's actually a common error code for APIs everywhere. So, before we get into how to use Frugal U's Resources API, let's talk about what an API actually is.
+APIs can be hard to understand and implement even for devs who have been working with APIs for over a decade. You've probably used APIs and not even realized it. Every time you go onto a website like [Youtube](https://www.youtube.com/) or [Google](https://www.google.com/), you're using an API to load that web page. If you've ever gotten a 404 page error when you try to connect to a page, that's actually a common error code for APIs everywhere. So, before we get into how to use Frugal U's Resources API, let's talk about what an API actually is.
 
-<h2>If you're already well versed on APIs Click "Overview of the API" on the sidebar to jump to the first section of this documentation.<h2>
+<h2>If you're already well-versed on APIs click "Overview of the API" on the sidebar to jump to the first section of this documentation.<h2>
 
 
 
 ### **What is an API?**
 
-An [API](https://en.wikipedia.org/wiki/API) or a (Application Programming Interface) is essentially a set of rules or protocols that allow different software systems or applications to communicate with each other. It defines the methods and data formats that the systems can use to request and exchange information. You can think of it like a waiter at a restaurant: the waiter takes your order (request) and brings it to the kitchen (the system), which processes it (action) and brings the food back (response).
+An [API](https://en.wikipedia.org/wiki/API) or an Application Programming Interface is essentially a set of rules or protocols that allow different software systems or applications to communicate with each other. It defines the methods and data formats that the systems can use to request and exchange information. You can think of it like a waiter at a restaurant: the waiter takes your order (request) and brings it to the kitchen (the system), which processes it (action) and brings the food back (response).
 
 ### **An API typically includes**
 
@@ -197,8 +197,8 @@ Learn more about JWT [here](https://jwt.io/introduction)
 🧪 Quick Summary
 
 ### **Feature	Needed for Resources API?	Why?**
-Authentication	❌ Not needed	API content is public and read-only
-Authorization	❌ Not needed	Users can’t modify or delete any content
+Authentication	❌ Not needed. API content is public and read-only
+Authorization	❌ Not needed. Users can’t modify or delete any content
 
 Next is probably one of the most important sections for understanding how this API works ** Endpoints and Parameters** Once you understand these you'll understand how to use [Requests](https://getstream.io/glossary/api-request/) to access every relevant endpoint this API has, and come away with a deeper understanding of endpointers and parameters in practice.
 
@@ -225,7 +225,7 @@ Next is probably one of the most important sections for understanding how this A
 
 Use query parameters to filter by category. You can also chain filters for more advanced queries. 
 
-**Below is Javascript code to use for the API**
+**Below is JavaScript code to use for the API**
 
 ```js
 const filteredData = result.data.filter((resource) => 
@@ -240,7 +240,7 @@ const filteredData = result.data.filter((resource) =>
  ### **UPDATE an Existing Resource**
 > PUT http://localhost:1337/api/financial-resources/:id
 
-*Updates a resource permanently from the system. Only available if the user has proper permissions. Replace :id with the unique ID of the resource you want to update.*
+*Updates a resource permanently from the system. Only available if the user has proper permissions. Replace: id with the unique ID of the resource you want to update.*
 
 <br></br>
 
@@ -314,7 +314,7 @@ The Response is what the library (the API server) sends back to you:
 
 ### 🔗 **How Requests Tie to Endpoints and Parameters<a id="how-requests-tie-to-endpoints-and-parameters"></a>**
 
-**Let’s break it down Below.**
+**Let’s break it down below.**
 
 *Endpoints* are like specific departments in the library.
 
@@ -370,7 +370,7 @@ The **response** is what comes back from the kitchen.
 
 ### **Diving Deeper Into What Request and Responses Are**<a id="dd"></a>
 
-At the heart of every interaction with a RESTful API are requests and responses — a two-way conversation between a client (like a browser or app) and a server. A request is the action initiated by the client to access or modify a resource — such as asking for budgeting tips, submitting new expenses, or updating a user's profile. This is done using standard HTTP methods like GET, POST, PUT, or DELETE. Each request targets a specific endpoint, and may include additional details like parameters, query strings, or authentication tokens. In response, the API server returns structured data (usually in JSON format) along with a status code that communicates whether the request succeeded, failed, or needs further input. JSON, short for JavaScript Object Notation, is a lightweight data format that’s easy to read and ideal for web-based applications. Some legacy systems may still use XML, but JSON is by far the modern standard.
+At the heart of every interaction with a RESTful API are requests and responses — a two-way conversation between a client (like a browser or app) and a server. A request is the action initiated by the client to access or modify a resource, such as asking for budgeting tips, submitting new expenses, or updating a user's profile. This is done using standard HTTP methods like GET, POST, PUT, or DELETE. Each request targets a specific endpoint and may include additional details like parameters, query strings, or authentication tokens. In response, the API server returns structured data (usually in JSON format) along with a status code that communicates whether the request succeeded, failed, or needs further input. JSON, short for JavaScript Object Notation, is a lightweight data format that’s easy to read and ideal for web-based applications. Some legacy systems may still use XML, but JSON is by far the modern standard.
 
 ![Image](./APIPnV/FRStrap.png)
 
@@ -652,12 +652,12 @@ Error codes help you understand how to better debug your API, whether you're a d
 
 ## 📨 Conclusion <a id="change"></a>
 
-Currently this API hasn't been updated by the creator, it only has one version. Luckily, that's what makes it so simple and easy to understand.
+Currently, this API hasn't been updated; it only has one version. Luckily, that's what makes it so simple and easy to understand.
 
-If you're new to APIs using a simple API like this to understand how they work is a blessing. The most intricate the API is, the higher the learning curve, thus discouraging future devs from understanding APIs at the start. It would be like learning about math by taking Calculus I instead of arithmetic, it's painful and a waste of time. This API is simplistic enough to where it's easy to understand but complex enough to where it has enough relevant endpoints to document and is public to where anyone can get any information using a tool like curl or Postman.
+If you're new to APIs, using a simple API like this to understand how they work is a blessing. The more intricate the API is, the higher the learning curve, thus discouraging future devs from understanding APIs at the start. It would be like learning about math by taking Calculus I instead of arithmetic, it's painful and a waste of time. This API is simplistic enough for understanding, but has enough relevant endpoints to document and is public to anyone can get any information using a tool like curl or Postman.
 
 
-📧 **Email:** support@frugal-u.com  
+📧 **Email:** joshuaschoen@outlook.com
 
 
 ---
