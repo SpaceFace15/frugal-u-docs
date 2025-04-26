@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <title>Frugal U API Docs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css">
+  
+  <!-- Docsify theme (light mode base) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  
+  <!-- Docsify Darklight Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css">
+
   <style>
     body {
       font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -60,10 +63,10 @@
 
     /* Style for dark mode toggle container */
     .darklight-toggle {
-      /* Docsify plugin will insert the toggle here */
+      /* Docsify Darklight Theme plugin will insert the toggle here */
     }
 
-    /* Remove duplicate app-name heading */
+    /* Hide the default Docsify title if needed */
     .app-name {
       display: none;
     }
@@ -73,56 +76,56 @@
       margin: 0 auto 2em auto;
       max-width: 600px;
     }
-	
-
-
-
-
-
-
-
   </style>
 </head>
+
 <body>
   <div id="app">Loading...</div>
 
-  <!-- Custom header with left and right controls -->
+  <!-- Custom Header -->
   <div class="custom-header">
     <div class="left-controls">
-      <!-- Place dark mode toggle here -->
       <div class="darklight-toggle"></div>
     </div>
     <div class="right-controls">
-      <!-- GitHub icon -->
       <a class="github-icon" href="https://github.com/SpaceFace15" target="_blank" title="View on GitHub">G</a>
     </div>
   </div>
 
+  <!-- Docsify Config -->
   <script>
     window.$docsify = {
-      name: '',
+      name: 'Frugal U API Docs',  // <- Give your sidebar and page a name!
       loadSidebar: true,
-      subMaxLevel: 1,
-      alias: { '/.*/_sidebar.md': '/_sidebar.md' },
-      darkMode: {
-        toggleBtn: true,
+      subMaxLevel: 2,             // Allow showing nested sidebar items
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      themeColor: '#42b983',      // Primary color
+      darklightTheme: {
+        siteFont : "Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif",
+        defaultTheme : "light",
+        codeFontFamily : "Roboto Mono, Monaco, courier, monospace",
+        bodyFontSize : "17px",
         dark: {
-          background: '#1e1e1e',
-          color: '#cfcfcf',
-          linkColor: '#42b983'
+          background: "#1e1e1e",
+          highlightColor: "#e96900",
+          codeBackgroundColor : "#2d2d2d",
+          textColor: "#cfcfcf",
+          codeTextColor : "#ccc"
         },
         light: {
-          background: '#ffffff',
-          color: '#2c3e50',
-          linkColor: '#42b983'
+          background: "#ffffff",
+          highlightColor: "#e96900",
+          codeBackgroundColor : "#f8f8f8",
+          textColor: "#2c3e50",
+          codeTextColor : "#525252"
         }
       }
     };
-
-
-    
   </script>
 
+  <!-- Docsify Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
 </body>
