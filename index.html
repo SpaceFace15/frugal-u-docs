@@ -14,6 +14,7 @@
   <style>
     body {
       font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      padding: 40px 20px;
     }
 
     /* Center the main container */
@@ -30,7 +31,7 @@
       top: 10px;
       width: 100%;
       display: flex;
-      justify-content: flex-end; /* Align controls to right */
+      justify-content: flex-end;
       padding: 0 20px;
       z-index: 1000;
     }
@@ -39,6 +40,14 @@
       display: flex;
       align-items: center;
       gap: 10px;
+    }
+
+    /* Optional: style dark mode toggle button if needed */
+    .darklight-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
     }
 
     /* Hide the default Docsify title if needed */
@@ -60,8 +69,8 @@
   <!-- Custom Header -->
   <div class="custom-header">
     <div class="right-controls">
-      <!-- Dark mode toggle button will be inserted here by Docsify Darklight Theme automatically -->
-      <div id="docsify-darklight-theme"></div>
+      <!-- Placeholder for Dark Mode Toggle -->
+      <div id="darklight-toggle"></div>
     </div>
   </div>
 
@@ -101,5 +110,16 @@
   <!-- Docsify Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+
+  <!-- Move Dark Mode Toggle into the Header -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var darklightToggle = document.querySelector('.darklight-toggle');
+      var placeholder = document.getElementById('darklight-toggle');
+      if (darklightToggle && placeholder) {
+        placeholder.appendChild(darklightToggle);
+      }
+    });
+  </script>
 </body>
 </html>
