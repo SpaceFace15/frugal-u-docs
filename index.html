@@ -14,7 +14,6 @@
   <style>
     body {
       font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      padding: 40px 20px;
     }
 
     /* Center the main container */
@@ -31,34 +30,15 @@
       top: 10px;
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end; /* Align controls to right */
       padding: 0 20px;
       z-index: 1000;
     }
 
-    .left-controls, .right-controls {
+    .right-controls {
       display: flex;
       align-items: center;
       gap: 10px;
-    }
-
-    .github-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background-color: #24292e;
-      color: white;
-      font-weight: bold;
-      font-size: 14px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .github-icon:hover {
-      background-color: #0366d6;
     }
 
     /* Hide the default Docsify title if needed */
@@ -79,24 +59,22 @@
 
   <!-- Custom Header -->
   <div class="custom-header">
-    <div class="left-controls">
-      <!-- Remove this div as Docsify Darklight will insert it automatically -->
-    </div>
     <div class="right-controls">
-      <a class="github-icon" href="https://github.com/SpaceFace15" target="_blank" title="View on GitHub">G</a>
+      <!-- Dark mode toggle button will be inserted here by Docsify Darklight Theme automatically -->
+      <div id="docsify-darklight-theme"></div>
     </div>
   </div>
 
   <!-- Docsify Config -->
   <script>
     window.$docsify = {
-      name: 'Frugal U API Docs',  // <- Give your sidebar and page a name!
+      name: 'Frugal U API Docs',
       loadSidebar: true,
-      subMaxLevel: 2,             // Allow showing nested sidebar items
+      subMaxLevel: 2,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
-      themeColor: '#42b983',      // Primary color
+      themeColor: '#42b983',
       darklightTheme: {
         siteFont : "Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif",
         defaultTheme : "light",
