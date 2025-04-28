@@ -200,7 +200,7 @@ Learn more about JWT [here](https://jwt.io/introduction)
 Authentication	❌ Not needed. API content is public and read-only
 Authorization	❌ Not needed. Users can’t modify or delete any content
 
-Next is probably one of the most important sections for understanding how this API works ** Endpoints and Parameters** Once you understand these you'll understand how to use [Requests](https://getstream.io/glossary/api-request/) to access every relevant endpoint this API has, and come away with a deeper understanding of endpointers and parameters in practice.
+Next is probably one of the most important sections for understanding how this API works **Endpoints and Parameters** Once you understand these you'll understand how to use [Requests](https://getstream.io/glossary/api-request/) to access every relevant endpoint this API has, and come away with a deeper understanding of endpointers and parameters in practice.
 
 ---
 
